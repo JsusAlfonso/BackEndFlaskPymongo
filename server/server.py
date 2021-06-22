@@ -9,10 +9,14 @@ import sys
 import requests
 import os
 
+db = config.connection().db
+bdOnOff = config.dbOnline(db)
+if(bdOnOff['intResp'] == 1):
+    print(bdOnOff['strMsg'])
+    config.app.register_blueprint(index.api, url_prefix='/api')
+else:
+    print(bdOnOff['strMsg'])
 
-# db = config.connection().db
-
-config.app.register_blueprint(index.api, url_prefix='/api')
 
 if __name__ == '__main__':
     config.app.run(host=config.strHost,port=config.strPort,debug=True,threaded=True)

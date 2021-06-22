@@ -1,6 +1,5 @@
 # Necessary imports
 from flask import Blueprint, Flask, jsonify, request
-import config.config  as config
 api = Blueprint('/api', __name__)
 
 #Routes imports

@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 import config.config  as config
+#from server import db
 from bson import json_util, ObjectId
 import json
 db = config.connection().db
