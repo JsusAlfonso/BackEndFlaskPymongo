@@ -31,3 +31,6 @@ we have the connection and the mongo uri in this file.
 
 ## Help
 To get more help on the [Pymongo-Flask](https://flask-pymongo.readthedocs.io/en/latest/) version 2.3.0 show this url.
+
+## VS-Code
+ Install [REST-Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)

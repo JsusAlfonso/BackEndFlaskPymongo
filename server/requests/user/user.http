@@ -1,0 +1,87 @@
+@api = http://localhost:5050/api/user/
+
+#Inicio--------------------------------------------------------------------------------01#
+###GET 
+GET {{api}}
+Content-Type: application/json
+
+{
+    "_id": "60a2847ead2feed014cbeedf"
+}
+
+#Fin-----------------------------------------------------------------------------------01#
+
+#Inicio--------------------------------------------------------------------------------02#
+### Post mediante el tipo application/x-www-form-urlencoded
+# POST {{api}}
+# Content-Type: application/x-www-form-urlencoded
+
+# strName=Jsus
+# &nmbYears=24
+# &strPassword=jsuscrack.1234
+
+### Post mediante el tipo application/json
+POST {{api}}
+Content-Type: application/json
+
+{
+    "strName": "Jsus",
+    "nmbYears": 24,
+    "strPassword": "jsuscrack.1234"
+}
+
+#Fin-----------------------------------------------------------------------------------02#
+
+#Inicio--------------------------------------------------------------------------------03#
+# ### Post mediante el tipo multipart/form-data para enviar archivos
+# POST {{api}}
+# Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="strName"
+
+# Jsus
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="nmbYears"
+
+# 24
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="strPassword"
+
+# jsuscrack.1234
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+
+# Content-Disposition: form-data; name="strFile"; filename="1.png"
+# Content-Type: image/png
+
+# < ./1.png 
+
+# # ------WebKitFormBoundary7MA4YWxkTrZu0gW
+
+# # Content-Disposition: form-data; name="strFile"; filename="12.png"
+# # Content-Type: image/png
+
+# # < ./1.png 
+
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+#Fin-----------------------------------------------------------------------------------03#
+
+#Inicio--------------------------------------------------------------------------------04#
+###PUT
+PUT {{api}}?_id=60a2847ead2feed014cbeedf
+Content-Type: application/x-www-form-urlencoded
+
+ssss=aaaa
+
+#Fin-----------------------------------------------------------------------------------04#
+
+#Inicio--------------------------------------------------------------------------------05#
+
+###DELETE
+Delete {{api}}?strNombre=Jsus
+Content-Type: application/x-www-form-urlencoded
+
+blnActivo=False
+
+#Fin-----------------------------------------------------------------------------------05#
