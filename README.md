@@ -9,7 +9,9 @@ pip install requests
 pip install Flask
 pip install Flask-PyMongo
 `--------optional--------`
+#
 pip install Flask-WTF
+#
 pip install Flask-RESTful
 pip install flask_cors
 pip install pymongo
